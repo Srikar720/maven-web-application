@@ -13,7 +13,7 @@
 <h1 align="center"> Namaste </h1>
 <hr>
 <br>
-	<h1><h3> Server Side IP Address </h3><br>
+	<h1><h3> 13.126.211.23 </h3><br>
 
 <% 
 String ip = "";
