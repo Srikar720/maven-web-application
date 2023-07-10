@@ -20,7 +20,7 @@ stages{
 
   stage('CheckOutCode'){
     steps{
-    git branch: 'development', credentialsId: '957b543e-6f77-4cef-9aec-82e9b0230975', url: 'https://github.com/devopstrainingblr/maven-web-application-1.git'
+    git branch: 'master', credentialsId: '304e241b-f74c-4ac3-976c-53343a2f12af', url: 'https://github.com/Srikar720/maven-web-application.git'
 	
 	}
   }
@@ -56,17 +56,17 @@ stages{
 post{
 
  success{
- emailext to: 'devopstrainingblr@gmail.com,mithuntechnologies@yahoo.com',
+ emailext to: 'srikarji.92@gmail.com',
           subject: "Pipeline Build is over .. Build # is ..${env.BUILD_NUMBER} and Build status is.. ${currentBuild.result}.",
           body: "Pipeline Build is over .. Build # is ..${env.BUILD_NUMBER} and Build status is.. ${currentBuild.result}.",
-          replyTo: 'devopstrainingblr@gmail.com'
+          replyTo: 'srikarji.92@gmail.com'
  }
  
  failure{
- emailext to: 'devopstrainingblr@gmail.com,mithuntechnologies@yahoo.com',
+ emailext to: 'srikarji.92@gmail.com',
           subject: "Pipeline Build is over .. Build # is ..${env.BUILD_NUMBER} and Build status is.. ${currentBuild.result}.",
           body: "Pipeline Build is over .. Build # is ..${env.BUILD_NUMBER} and Build status is.. ${currentBuild.result}.",
-          replyTo: 'devopstrainingblr@gmail.com'
+          replyTo: 'srikarji.92@gmail.com'
  }
  
 }
